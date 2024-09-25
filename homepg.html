@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIRST and FOLLOW Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>FIRST and FOLLOW Calculator</h1>
+        <div class="tabs">
+            <button class="tablink" onclick="openTab(event, 'Inputs')">Inputs</button>
+            <button class="tablink" onclick="openTab(event, 'Output')">Output</button>
+        </div>
+
+        <!-- Input Tab -->
+        <div id="Inputs" class="tabcontent">
+            <h2>Enter Grammar Details</h2>
+            <label for="nonTerminals">Non-terminals (comma separated):</label>
+            <input type="text" id="nonTerminals" placeholder="E, T, F">
+            <label for="terminals">Terminals (comma separated):</label>
+            <input type="text" id="terminals" placeholder="a, b, c">
+            <label for="productions">Productions (use '->' for rules, '|' for alternates):</label>
+            <textarea id="productions" rows="5" placeholder="E -> E + T | T&#10;T -> T * F | F"></textarea>
+            <button class="calculate-btn" onclick="submitGrammar()">Calculate FIRST & FOLLOW</button>
+        </div>
+
+        <!-- Output Tab -->
+        <div id="Output" class="tabcontent">
+            <h2>Results</h2>
+            <div id="firstOutput"></div>
+            <div id="followOutput"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
