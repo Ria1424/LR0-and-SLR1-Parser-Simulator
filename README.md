@@ -1,3 +1,1 @@
-# Compiler-design-Simulation
-
-https://ria1424.github.io/Compiler-design-Simulation/
+# LR(0) and SLR(1)-Simulation
